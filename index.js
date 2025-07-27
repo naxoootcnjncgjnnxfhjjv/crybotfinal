@@ -19,6 +19,11 @@ bot.command("farm", (ctx) => ctx.reply("🌾 Activando modo farming..."));
 bot.command("vender", (ctx) => ctx.reply("📤 Listando NFTs para venta..."));
 bot.command("tareas", (ctx) => ctx.reply("📋 Ejecutando tareas Galxe, Zealy y Layer3..."));
 
+// Endpoint de salud para monitorización
+app.get("/api/health", (req, res) => {
+  res.json({ status: "ok", backend: "crybot", timestamp: Date.now() });
+});
+
 app.get("/", (req, res) => {
   res.send("CryBot Backend Running ✅");
 });
