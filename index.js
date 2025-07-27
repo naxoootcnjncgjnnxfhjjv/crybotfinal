@@ -22,12 +22,7 @@ bot.command("tareas", (ctx) => ctx.reply("📋 Ejecutando tareas Galxe, Zealy y 
 // Endpoint de salud para monitorización
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", backend: "crybot", timestamp: Date.now() });
-});
-// Endpoint de salud para monitorización
-app.get("/api/health", (req, res) => {
-  res.json({ status: "ok", backend: "crybot", timestamp: Date.now() });
-});
-
+ });
 app.get("/", (req, res) => {
   res.send("CryBot Backend Running ✅");
 });
