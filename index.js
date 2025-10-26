@@ -2,9 +2,10 @@ require('dotenv').config();
 const express = require('express');
 const { Telegraf } = require('telegraf');
 // En Node >= 18 puedes usar fetch sin instalar nada; en versiones anteriores instala node-fetch
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+//con//st fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const verifyTonContract = require('./verifyTonContract');
-
+////
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 const app = express();
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
